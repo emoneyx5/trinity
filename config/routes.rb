@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: 'pages#main'
   get "/auth/:provider/callback" => "sessions#create"
 
   # The priority is based upon order of creation: first created -> highest priority.
