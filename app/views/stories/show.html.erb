@@ -7,3 +7,8 @@
 		<%= @story.body %>
 	</div>
 </class>
+
+<% if @story.author.id == session[:user_id] %>
+	<%= link_to "edit story", edit_story_path(@story)%><br>
+	<%= link_to "delete story", @story, method: :delete%><br>
+<% end %>
