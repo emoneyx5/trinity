@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+h1{
+	text-align: center
+}
+
 #story_title{
 	font-size: 50px;
 	text-align: center;
@@ -11,4 +15,21 @@
 	font-size: 25px;
 	border: 1px solid black;
 	margin: 5% 10% 10% 10%;
+}
+
+#form_container div{
+	text-align: center;
+}
+
+.story_box {
+	float: left;
+	border-style: solid;
+	width: 250px;
+	text-align: center;
+	height: 250px;
+	margin-left: 2%;
+	margin-bottom: 5%;
+	overflow: scroll;
+	line-height: 25px;
+	padding: 10px;
 }
