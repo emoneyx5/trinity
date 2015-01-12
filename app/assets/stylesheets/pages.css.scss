@@ -1,3 +1,27 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+	font-family: 'Playfair Display';
+}
+
+
+/*HOMEPAGE*/
+#title{
+	font-size: 80px;
+	text-align: center;
+}
+
+.top_nav div{
+	font-size: 30px;
+	display: inline-flex;
+}
+
+#sign_out{
+	float: right;
+}
+
+#twitter_link{
+	font-size: 30px;
+}

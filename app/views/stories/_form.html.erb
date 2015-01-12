@@ -1,0 +1,17 @@
+<%= form_for @story do |s| %>
+	<div>
+		<%= s.label :title %>
+		<%= s.text_field :title %>
+	</div>
+	<div>
+		<%= s.label :body %>
+		<%= s.text_area :body %>
+	</div>
+	<div>
+	<%= s.hidden_field :user_id, :value => @current_user.id %>
+	<%= puts @current_user%>
+	</div>
+	<div>
+		<%= s.submit %>
+	</div>
+<% end %>

@@ -1,0 +1,9 @@
+<h1> all the stories </h1>
+
+<% @stories.each do |story| %>
+	<%= story.title %><br>
+	<%= story.body %><br>
+	<%= link_to "edit story", edit_story_path(story)%><br>
+	<%= link_to "delete story", story, method: :delete%><br>
+	<br>
+<% end %>
