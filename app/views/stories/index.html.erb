@@ -5,5 +5,11 @@
 	<div class="story_box">
 		<%= link_to story.title, story %><br>
 		<%= story.body %><br>
+		<% unless story.keyword == nil %>
+			<%= story.keyword.wordone %>,
+			<%= story.keyword.wordtwo %>,
+			<%= story.keyword.wordthree %>
+		<% end %>
+
 	</div>
 <% end %>

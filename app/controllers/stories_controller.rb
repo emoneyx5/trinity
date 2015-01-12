@@ -6,6 +6,7 @@ class StoriesController < ApplicationController
 
 	def new
 		@story = Story.new
+		@keyword = Keyword.last
 	end
 
 	def show
@@ -36,6 +37,6 @@ class StoriesController < ApplicationController
 	private
 
 	def story_params
-		params.require(:story).permit(:title, :body, :user_id, :keywords)
+		params.require(:story).permit(:title, :body, :user_id, :keyword_id)
 	end
 end
