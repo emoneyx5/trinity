@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :stories, :users, :votes, :comments, :keywords
+  resources :stories, :users, :votes, :comments, :keywords, :pages, :sessions
   root to: 'pages#main'
   get "/auth/:provider/callback" => "sessions#create"
   get "/signout" => "sessions#destroy", :as => :signout

@@ -11,6 +11,9 @@
 
 <% if current_user %>
 	<div class="top_nav">
+		<div id="home">
+			<%= link_to "home", stories_path %>
+		</div>
 		<div id="welcome">
 	    Welcome, <%= current_user.name %>!
 		</div>
