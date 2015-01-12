@@ -2,6 +2,9 @@
 	<div id="story_title">
 		<%= @story.title %>
 	</div>
+	<div id="story_keywords">
+		<%= Keyword.display_keywords(@keyword) %>
+	</div>
 	<br>
 	<div id="story_body">
 		<%= @story.body %>

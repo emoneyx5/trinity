@@ -3,6 +3,13 @@
 		<div id="story_form_title">
 			<%= s.text_field :title, :rows => "1", :cols => "40" %>
 		</div>
+		<div id="story_form_keywords">
+			<% unless @story.keyword == nil %>
+				<%= @story.keyword.wordone %>
+				<%= @story.keyword.wordtwo %>
+				<%= @story.keyword.wordthree %>
+			<% end %>
+		</div>
 		<div id="story_form_body">
 			<%= s.text_area :body, :rows => "20", :cols => "80" %>
 		</div>
