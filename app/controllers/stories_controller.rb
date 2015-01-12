@@ -6,7 +6,10 @@ class StoriesController < ApplicationController
 
 	def new
 		@story = Story.new
-		@current_user = User.find(id=session[:user_id])
+	end
+
+	def show
+		@story = Story.find(params[:id])
 	end
 
 	def create
