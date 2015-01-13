@@ -8,13 +8,13 @@
 
 user1 = User.create(provider: "twitter", uid: "25955180", name: "Edwin")
 
-keyword1 = Keyword.create(wordone: "heart", wordtwo: "soul", wordthree: "mind", story_id: Story.all.sample)
-keyword2 = Keyword.create(wordone: "love", wordtwo: "peace", wordthree: "soul", story_id: Story.all.sample)
+# keyword1 = Keyword.create(wordone: "heart", wordtwo: "soul", wordthree: "mind")
+# keyword2 = Keyword.create(wordone: "love", wordtwo: "peace", wordthree: "soul")
 
-Story.create(author: user1, title: "first story", body: "first text", keyword: keyword1)
-Story.create(author: user1, title: "second story", body: "second text", keyword: keyword2)
-Story.create(author: user1, title: "third story", body: "third text", keyword: keyword1)
-Story.create(author: user1, title: "fourth story", body: "fourth text", keyword: keyword2)
+# Story.create(author: user1, title: "first story", body: "first text", keyword: keyword1)
+# Story.create(author: user1, title: "second story", body: "second text", keyword: keyword2)
+# Story.create(author: user1, title: "third story", body: "third text", keyword: keyword1)
+# Story.create(author: user1, title: "fourth story", body: "fourth text", keyword: keyword2)
 
 Vote.create(user: user1, story: Story.all.sample)
 Vote.create(user: user1, story: Story.all.sample)
@@ -24,3 +24,11 @@ Comment.create(user: User.all.sample, text: "first comment")
 Comment.create(user: User.all.sample, text: "second comment")
 Comment.create(user: User.all.sample, text: "third comment")
 Comment.create(user: User.all.sample, text: "fourth comment")
+
+2.times do
+	Story.create(author: user1, title: "i bomb atomically", body: "socrates philosophies")
+end
+
+2.times do
+Story.find(Story.all.sample.id).keywords.create(wordone: "bomb", wordtwo: "atomically", wordthree: "prophesies")
+end
