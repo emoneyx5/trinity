@@ -25,10 +25,10 @@ Comment.create(user: User.all.sample, text: "second comment")
 Comment.create(user: User.all.sample, text: "third comment")
 Comment.create(user: User.all.sample, text: "fourth comment")
 
-2.times do
+5.times do
 	Story.create(author: user1, title: "i bomb atomically", body: "socrates philosophies")
 end
 
-2.times do
+5.times do
 Story.find(Story.all.sample.id).keywords.create(wordone: "bomb", wordtwo: "atomically", wordthree: "prophesies")
 end

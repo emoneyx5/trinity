@@ -6,7 +6,7 @@ class StoriesController < ApplicationController
 
 	def new
 		@story = Story.new
-		keyword = Keyword.last
+		@keyword = Keyword.last
 	end
 
 	def show

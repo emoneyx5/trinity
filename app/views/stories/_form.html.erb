@@ -4,7 +4,16 @@
 			<%= s.text_field :title, :rows => "1", :cols => "40" %>
 		</div>
 		<div id="story_form_keywords">
-
+		 	the three little words are:<br>
+				<% if @story.keywords.first != nil %>
+					<%= @story.keywords.first.wordone %>
+					<%= @story.keywords.first.wordtwo %>
+					<%= @story.keywords.first.wordthree %>
+				<% else %>
+					<%= @keyword.wordone %>,
+					<%= @keyword.wordtwo %>,
+					<%= @keyword.wordthree %>
+				<% end %>
 		</div>
 		<div id="story_form_body">
 			<%= s.text_area :body, :rows => "20", :cols => "80" %>
