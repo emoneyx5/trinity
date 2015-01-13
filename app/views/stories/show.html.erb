@@ -3,9 +3,9 @@
 		<%= @story.title %>
 	</div>
 	<div id="story_keywords">
-		<% unless @story.keyword == nil %>
-		<%= @keyword.display_keywords %>
-		<% end %>
+		<%=@story.keywords.first.wordone%>
+		<%=@story.keywords.first.wordtwo%>
+		<%=@story.keywords.first.wordthree%>
 	</div>
 	<br>
 	<div id="story_body">

@@ -6,7 +6,7 @@ class StoriesController < ApplicationController
 
 	def new
 		@story = Story.new
-		@keyword = Keyword.last
+		keyword = Keyword.last
 	end
 
 	def show
@@ -14,12 +14,15 @@ class StoriesController < ApplicationController
 	end
 
 	def create
-		Story.create(story_params)
+		@story = Story.create(story_params)
+		@keyword = Keyword.last
+		@story.keywords.create(wordone: @keyword.wordone, wordtwo: @keyword.wordtwo, wordthree: @keyword.wordthree)
 		redirect_to stories_path
 	end
 
 	def edit
 		@story = Story.find(params[:id])
+		@keyword = @story.keywords
 	end
 
 	def update
@@ -37,6 +40,6 @@ class StoriesController < ApplicationController
 	private
 
 	def story_params
-		params.require(:story).permit(:title, :body, :user_id, :keyword_id)
+		params.require(:story).permit(:title, :body, :user_id)
 	end
 end
