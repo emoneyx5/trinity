@@ -8,8 +8,8 @@
 
 user1 = User.create(provider: "twitter", uid: "25955180", name: "Edwin")
 
-keyword1 = Keyword.create(wordone: "heart", wordtwo: "soul", wordthree: "mind")
-keyword2 = Keyword.create(wordone: "love", wordtwo: "peace", wordthree: "soul")
+keyword1 = Keyword.create(wordone: "heart", wordtwo: "soul", wordthree: "mind", story_id: Story.all.sample)
+keyword2 = Keyword.create(wordone: "love", wordtwo: "peace", wordthree: "soul", story_id: Story.all.sample)
 
 Story.create(author: user1, title: "first story", body: "first text", keyword: keyword1)
 Story.create(author: user1, title: "second story", body: "second text", keyword: keyword2)

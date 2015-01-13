@@ -7,4 +7,7 @@ class Story < ActiveRecord::Base
 
 	has_many :comments
 	has_many :commentors, through: :comments, class_name: "User", source: :user
+
+	has_many :story_keywords
+	has_many :keywords, through: :story_keywords
 end

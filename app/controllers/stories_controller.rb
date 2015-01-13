@@ -20,7 +20,6 @@ class StoriesController < ApplicationController
 
 	def edit
 		@story = Story.find(params[:id])
-		@keyword = @story.keyword
 	end
 
 	def update

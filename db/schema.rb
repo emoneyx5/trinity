@@ -40,6 +40,13 @@ ActiveRecord::Schema.define(version: 20150108224313) do
     t.datetime "updated_at"
   end
 
+  create_table "story_keywords", force: true do |t|
+    t.integer  "story_id"
+    t.integer  "keyword_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "subs", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
