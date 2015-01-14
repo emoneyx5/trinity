@@ -19,7 +19,14 @@
 	<%= link_to "delete story", @story, method: :delete%><br>
 <% end %>
 
+<ol>
+	<% @parentcomments.each do |comment| %>
+		<li><%= p comment.user.name %> says: <%= p comment.text %></li>
+		<ul><% unless comment.children.empty? %>
+			<% comment.children.each do |child| %>
+				<li><%= child.text %> by: <%=child.user.name%></li>
+			<% end %></ul>
+		<% end %>
+	<% end %>
+</ol>
 
-<%= @comments.each do |comment| %>
-	<p><%= p comment.text %></p>
-<% end %>

@@ -3,12 +3,17 @@
 
 <% @stories.each do |story| %>
 	<div class="story_box">
-		<%= link_to story.title, story %><br>
-		<%= story.body[0..50] %><br>
-		<br>
-		<p> three little words: </p>
-		<%= story.keywords.first.wordone %>,
-		<%= story.keywords.first.wordtwo %>,
-		<%= story.keywords.first.wordthree %>
+		<div id="story_box_title">
+			<%= link_to story.title, story %><br>
+		</div>
+		<div id="story_box_body">
+			<%= story.body[0..50] %><br>
+		</div><br>
+		<div id="story_box_keywords">
+			three little words:
+			<%= story.keywords.first.wordone %>,
+			<%= story.keywords.first.wordtwo %>,
+			<%= story.keywords.first.wordthree %>
+		</div>
 	</div>
 <% end %>
