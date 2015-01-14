@@ -15,17 +15,36 @@ body{
 
 .top_nav div{
 	font-size: 30px;
-	display: inline-flex;
-}
-
-#sign_out{
-	float: right;
+	display: inline;
+	color: red;
 }
 
 #twitter_link{
 	font-size: 30px;
 }
 
-#storyboard_link{
+.navbar ul{
+	list-style-type: none;
+	display: flex;
+}
 
+#left_navbar{
+	color: blue
+}
+
+#right_navbar{
+	float:right;
+}
+
+#story_box_title{
+	font-size: 24px;
+}
+
+#story_box_body{
+	text-align: left;
+	margin-top: 2%;
+}
+
+#story_box_keywords{
+	border: 1px solid black;
 }
